@@ -467,7 +467,8 @@ footer {
 }
 
 /* Base Components */
-button {
+button,
+.btn {
     cursor: pointer;
     border: none;
     font-family: var(--font-headline);
@@ -475,9 +476,12 @@ button {
     text-transform: uppercase;
     transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s ease;
     border-radius: var(--radius-sm);
+    text-decoration: none;
+    display: inline-block;
 }
 
-button:active {
+button:active,
+.btn:active {
     transform: scale(0.98);
 }
 
