@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Biotik | Precision Agri-Health Audit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#380d08",
+              "secondary-fixed": "#d5e3fd",
+              "inverse-on-surface": "#eff1f3",
+              "on-secondary-container": "#57657b",
+              "surface-dim": "#d8dadc",
+              "on-surface-variant": "#404944",
+              "primary-container": "#064e3b",
+              "outline-variant": "#bfc9c3",
+              "surface-container-highest": "#e0e3e5",
+              "on-surface": "#191c1e",
+              "on-primary-fixed-variant": "#0b513d",
+              "surface-variant": "#e0e3e5",
+              "on-error": "#ffffff",
+              "surface-bright": "#f7f9fb",
+              "inverse-primary": "#95d3ba",
+              "on-tertiary-container": "#ea9e93",
+              "surface": "#f7f9fb",
+              "primary": "#064E3B",
+              "surface-container": "#eceef0",
+              "tertiary": "#4f1f19",
+              "surface-container-low": "#f2f4f6",
+              "error-container": "#ffdad6",
+              "secondary": "#515f74",
+              "on-primary-container": "#80bea6",
+              "surface-tint": "#064E3B",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "inverse-surface": "#2d3133",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#b0f0d6",
+              "secondary-fixed-dim": "#b9c7e0",
+              "on-secondary-fixed": "#0d1c2f",
+              "on-background": "#191c1e",
+              "surface-container-high": "#e6e8ea",
+              "primary-fixed-dim": "#95d3ba",
+              "on-tertiary": "#ffffff",
+              "outline": "#707974",
+              "tertiary-container": "#6b342d",
+              "on-secondary-fixed-variant": "#3a485c",
+              "tertiary-fixed": "#ffdad5",
+              "secondary-container": "#d5e3fd",
+              "on-primary-fixed": "#002117",
+              "tertiary-fixed-dim": "#ffb4a9",
+              "on-tertiary-fixed-variant": "#6e372f",
+              "background": "#f7f9fb",
+              "on-primary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Manrope', sans-serif; }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+      .clinical-gradient { background: linear-gradient(135deg, #064E3B 0%, #0b513d 100%); }
+      .ghost-border { outline: 0.5px solid rgba(112, 121, 116, 0.2); }
+      .glass-audit { backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.7); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<nav class="bg-[#f7f9fb]/80 backdrop-blur-xl transition-colors duration-300 flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto sticky top-0 z-50">
+<div class="flex items-center gap-10">
+<div class="text-2xl font-black tracking-tighter text-[#064E3B] dark:text-[#f7f9fb] font-['Manrope']">BIOTIK</div>
+<div class="hidden lg:flex items-center space-x-8">
+<a class="font-['Manrope'] font-bold tracking-[-0.04em] uppercase text-xs text-slate-500 hover:text-[#064E3B] transition-colors" href="#">Farmer Portal</a>
+<a class="font-['Manrope'] font-bold tracking-[-0.04em] uppercase text-xs text-slate-500 hover:text-[#064E3B] transition-colors" href="#">Buyer Portal</a>
+<a class="font-['Manrope'] font-bold tracking-[-0.04em] uppercase text-xs text-[#064E3B] border-b-2 border-[#064E3B] pb-1" href="#">Marketplace</a>
+<a class="font-['Manrope'] font-bold tracking-[-0.04em] uppercase text-xs text-slate-500 hover:text-[#064E3B] transition-colors" href="#">Intelligence</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-surface-container-low text-on-surface-variant px-5 py-2.5 rounded font-['Manrope'] font-bold text-[10px] uppercase tracking-widest transition-all hover:bg-slate-200/50">
+            Verify Asset
+        </button>
+<button class="clinical-gradient text-white px-5 py-2.5 rounded font-['Manrope'] font-bold text-[10px] uppercase tracking-widest transition-transform active:scale-95 duration-100 shadow-sm">
+            Connect Wallet
+        </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-32 px-8 max-w-[1440px] mx-auto overflow-hidden">
+<div class="grid lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-7">
+<div class="inline-flex items-center space-x-2 bg-surface-container-low px-3 py-1 rounded mb-8 ghost-border">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-[10px] font-label font-bold tracking-widest uppercase text-secondary">LIVE AUDIT STREAM ENABLED</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-[-0.04em] uppercase text-primary leading-[0.9] mb-8">
+                    Transforming <br/>Public Health into <br/>Farmer Prosperity.
+                </h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed mb-10 font-body">
+                    The One Health marketplace verifying clinical-grade poultry to combat the global AMR crisis. Data-backed integrity for a resilient future.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="clinical-gradient text-white px-8 py-4 rounded font-headline font-bold uppercase tracking-wider text-sm transition-all hover:brightness-110 active:scale-[0.98]">
+                        Access the Marketplace
+                    </button>
+<button class="ghost-border border-outline-variant px-8 py-4 rounded font-headline font-bold uppercase tracking-wider text-sm text-primary transition-all hover:bg-surface-container-low">
+                        View Audit Logic
+                    </button>
+</div>
+</div>
+<!-- Live Node Dashboard Snippet -->
+<div class="lg:col-span-5 relative">
+<div class="bg-surface-container-lowest p-8 rounded ghost-border shadow-sm glass-audit">
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-outline-variant/20">
+<div>
+<div class="text-[10px] font-label font-bold text-secondary tracking-widest uppercase mb-1">Audit Instance</div>
+<div class="text-lg font-headline font-bold text-primary">BTK-992-NGR</div>
+</div>
+<div class="text-right">
+<div class="text-[10px] font-label font-bold text-secondary tracking-widest uppercase mb-1">Status</div>
+<div class="text-sm font-bold text-[#006b5b] flex items-center">
+<span class="material-symbols-outlined text-sm mr-1">verified</span> SECURE
+                            </div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="relative h-24 w-full bg-surface-container-low rounded overflow-hidden flex items-end">
+<div class="flex-1 bg-primary/20 mx-[1px] h-[40%]"></div>
+<div class="flex-1 bg-primary/30 mx-[1px] h-[55%]"></div>
+<div class="flex-1 bg-primary/40 mx-[1px] h-[48%]"></div>
+<div class="flex-1 bg-primary/50 mx-[1px] h-[70%]"></div>
+<div class="flex-1 bg-primary/60 mx-[1px] h-[85%]"></div>
+<div class="flex-1 clinical-gradient mx-[1px] h-[92%]"></div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="text-[10px] font-label font-black text-primary uppercase tracking-tighter bg-white/80 px-2 py-0.5">Verification Pulse</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container-low rounded">
+<div class="text-[10px] font-label font-bold text-secondary tracking-widest mb-1 uppercase">Batch Integrity</div>
+<div class="text-2xl font-headline font-bold text-primary">99.4<span class="text-xs ml-1">%</span></div>
+</div>
+<div class="p-4 bg-surface-container-low rounded">
+<div class="text-[10px] font-label font-bold text-secondary tracking-widest mb-1 uppercase">AMR Risk</div>
+<div class="text-2xl font-headline font-bold text-primary">0.02<span class="text-xs ml-1">μ</span></div>
+</div>
+</div>
+<div class="text-[9px] font-label text-outline uppercase tracking-widest leading-tight">
+                            HASHED BATCH ID: 8829-AF-001 <br/>
+                            TIMESTAMP: 2024.11.08.09:42:11 GMT+1
+                        </div>
+</div>
+</div>
+<!-- Decorative biological element -->
+<div class="absolute -z-10 -bottom-12 -right-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- The $1T Threat -->
+<section class="bg-surface-container-low py-32 px-8">
+<div class="max-w-[1440px] mx-auto grid md:grid-cols-2 gap-24 items-center">
+<div>
+<h2 class="text-sm font-label font-bold tracking-[0.2em] text-secondary uppercase mb-6">The Global Crisis</h2>
+<p class="text-4xl md:text-5xl font-headline font-bold text-primary tracking-tight leading-tight mb-8">
+                    Antimicrobial Resistance is predicted to cause 10 million deaths by 2050.
+                </p>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-12">
+                    We close the gap in the agricultural sector by digitizing biological transparency. Biotik creates a direct economic incentive for stewardship.
+                </p>
+<div class="grid grid-cols-2 gap-12 border-t border-outline-variant pt-12">
+<div>
+<div class="text-6xl font-headline font-extrabold text-primary tracking-tighter">10M</div>
+<div class="text-[10px] font-label font-bold text-secondary tracking-widest uppercase mt-2">Predicted Annual Deaths</div>
+</div>
+<div>
+<div class="text-6xl font-headline font-extrabold text-primary tracking-tighter">$1T</div>
+<div class="text-[10px] font-label font-bold text-secondary tracking-widest uppercase mt-2">Global Economic Impact</div>
+</div>
+</div>
+</div>
+<div class="relative bg-surface-container-lowest p-12 aspect-square flex flex-col justify-center ghost-border overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<img alt="Microscopic view of bacteria cells on a petri dish plate in a clinical laboratory setting" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX9jTuxKacDt0KHv33GpLT6tVz9pHKn13kKgA_i2Npe-UxRM99aKC4knf1Pjqoa3GzifvLbvqiUxMC7YqX01vsmexsgz0OvsHwBr6jZlRX7XaKDKLl1fnolFd0S4B8RCZA2xPBir8WJMykbeAAh1tcaLfcMJw5rPDGn5z3hzP2KFFNFMy2F7Ax-7cmqhbkouDz2Lz-8E_2a_sGk9Yqow1hN05Sxr8omUpHXbjwiLm_cCo9oEwe_MYZVt7iKJCCxPWsBb7olGzBupc"/>
+</div>
+<div class="relative z-10">
+<div class="text-[10px] font-label font-bold text-secondary tracking-[0.3em] uppercase mb-8 border-b border-outline-variant pb-2 inline-block">Security Quadrant</div>
+<div class="grid grid-cols-2 grid-rows-2 gap-0 border border-outline-variant/30 h-80">
+<div class="border-r border-b border-outline-variant/30 p-4 flex flex-col justify-end">
+<div class="text-[8px] font-label uppercase text-outline">Low Risk / High Data</div>
+</div>
+<div class="border-b border-outline-variant/30 p-4 bg-error/5 flex flex-col items-center justify-center">
+<div class="w-4 h-4 rounded-full bg-error animate-ping mb-2"></div>
+<div class="text-[8px] font-label uppercase text-error font-bold">Unverified Outbreak</div>
+</div>
+<div class="border-r border-outline-variant/30 p-4 flex flex-col justify-end">
+<div class="text-[8px] font-label uppercase text-outline">Biotik Standard</div>
+</div>
+<div class="p-4 clinical-gradient flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl mb-2">security</span>
+<div class="text-[8px] font-label uppercase text-white font-bold tracking-widest">Verified Sector</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Trust Engine -->
+<section class="py-32 px-8 max-w-[1440px] mx-auto">
+<div class="mb-20 text-center max-w-3xl mx-auto">
+<h2 class="text-4xl md:text-6xl font-headline font-bold text-primary tracking-tighter uppercase mb-6">The Trust Engine</h2>
+<div class="h-1 w-24 clinical-gradient mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- WhatsApp Logging -->
+<div class="bg-surface p-10 ghost-border flex flex-col h-full rounded">
+<div class="mb-8">
+<div class="w-12 h-12 rounded bg-primary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">chat_bubble</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4">WhatsApp Logging</h3>
+<p class="text-on-surface-variant leading-relaxed font-body text-sm">
+                        Frictionless daily entry for smallholder farmers. No complex apps; just authenticated reporting through familiar interfaces. Secure end-to-end data pipelines.
+                    </p>
+</div>
+<div class="mt-auto pt-8 border-t border-outline-variant/20">
+<div class="bg-surface-container-low p-4 rounded text-[11px] font-mono text-secondary">
+                        [09:00] FARMER_ID_442 logged: "No mortality today. Water intake optimal." -&gt; AUTH_HASH: 0x82f...
+                    </div>
+</div>
+</div>
+<!-- AI Auditor -->
+<div class="bg-surface p-10 ghost-border flex flex-col h-full relative overflow-hidden rounded">
+<div class="mb-8 relative z-10">
+<div class="w-12 h-12 rounded bg-primary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">query_stats</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4">AI Auditor</h3>
+<p class="text-on-surface-variant leading-relaxed font-body text-sm">
+                        Biological growth-curve (Cobb 500) triangulation verifies reporting accuracy against natural physiological limits. Discrepancies trigger on-site clinical audits.
+                    </p>
+</div>
+<div class="mt-auto pt-8 relative z-10">
+<div class="h-32 w-full flex items-end justify-between px-2 gap-1">
+<div class="w-full bg-slate-200 h-10"></div>
+<div class="w-full bg-slate-200 h-20"></div>
+<div class="w-full clinical-gradient h-24"></div>
+<div class="w-full clinical-gradient h-28"></div>
+<div class="w-full clinical-gradient h-30 relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] font-bold text-primary whitespace-nowrap">OPTIMAL</div>
+</div>
+</div>
+<div class="text-[10px] font-label font-bold text-secondary mt-4 text-center tracking-widest uppercase">Batch 882-C-NGR Trajectory</div>
+</div>
+</div>
+<!-- Stewardship Gold -->
+<div class="bg-surface p-10 ghost-border flex flex-col h-full items-center text-center rounded">
+<div class="mb-8">
+<div class="w-12 h-12 rounded bg-primary-container/10 flex items-center justify-center mb-6 mx-auto">
+<span class="material-symbols-outlined text-primary text-3xl">workspace_premium</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4">Stewardship Gold</h3>
+<p class="text-on-surface-variant leading-relaxed font-body text-sm">
+                        Verified batches earn a 20% price premium. Compliance is no longer a cost—it is the ultimate competitive advantage in the global health market.
+                    </p>
+</div>
+<div class="mt-auto w-full">
+<div class="relative group cursor-default">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-primary-container rounded blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+<div class="relative px-6 py-6 bg-white ghost-border flex flex-col items-center rounded">
+<div class="text-[9px] font-label font-bold text-secondary tracking-[0.4em] uppercase mb-2">Origin: NGA-0012</div>
+<div class="text-xl font-headline font-black text-primary tracking-tighter uppercase mb-1">STEWARDSHIP GOLD</div>
+<div class="text-[8px] font-label text-outline uppercase border border-outline-variant px-2 py-0.5">Verified Asset v2.4</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Metrics Ribbon -->
+<section class="bg-primary py-24 px-8 border-y-[0.5px] border-primary-container">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-16">
+<div class="text-center md:text-left flex-1">
+<div class="text-8xl font-headline font-extrabold text-white tracking-tighter mb-4 leading-none">$1.4T</div>
+<div class="text-sm font-label font-bold text-primary-container tracking-[0.2em] uppercase leading-tight">GLOBAL MARKET POTENTIAL FOR VERIFIED <br/>ANTIBIOTIC-FREE LIVESTOCK BY 2030</div>
+</div>
+<div class="h-px w-full md:w-px md:h-24 bg-primary-container"></div>
+<div class="text-center md:text-left flex-1">
+<div class="text-8xl font-headline font-extrabold text-white tracking-tighter mb-4 leading-none">20<span class="text-4xl align-top ml-1">%</span></div>
+<div class="text-sm font-label font-bold text-primary-container tracking-[0.2em] uppercase leading-tight">THE STEWARDSHIP PREMIUM <br/>EARNED BY OUR FARMERS</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-40 px-8">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-5xl md:text-7xl font-headline font-extrabold text-primary tracking-tighter uppercase mb-10 leading-[1.1]">
+                Ready to verify the future of food?
+            </h2>
+<p class="text-xl text-on-surface-variant leading-relaxed mb-12 max-w-2xl mx-auto">
+                Join the network of producers and buyers securing global health through data-backed integrity. Every verified batch is a step toward global health security.
+            </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="clinical-gradient text-white px-10 py-5 rounded font-headline font-bold uppercase tracking-wider text-sm">
+                    Join the Marketplace
+                </button>
+<button class="ghost-border px-10 py-5 rounded font-headline font-bold uppercase tracking-wider text-sm text-primary hover:bg-surface-container-low transition-colors">
+                    Partner with Biotik
+                </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#064E3B] text-white">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-12 py-16 w-full max-w-[1440px] mx-auto border-t-[0.5px] border-[#0b513d]">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-bold text-white mb-6 font-headline tracking-tighter">BIOTIK</div>
+<p class="font-['Inter'] text-[10px] uppercase tracking-widest leading-normal text-slate-400 max-w-[200px]">
+                Together we track health, to grow wealth.
+            </p>
+</div>
+<div class="space-y-4">
+<div class="font-['Inter'] text-[10px] uppercase tracking-widest text-white/50 mb-4">Protocols</div>
+<ul class="space-y-3">
+<li><a class="block font-['Inter'] text-[10px] uppercase tracking-widest text-slate-400 hover:text-white transition-colors" href="#">Security Protocol</a></li>
+<li><a class="block font-['Inter'] text-[10px] uppercase tracking-widest text-slate-400 hover:text-white transition-colors" href="#">Technical Audit</a></li>
+<li><a class="block font-['Inter'] text-[10px] uppercase tracking-widest text-slate-400 hover:text-white transition-colors" href="#">Node Verification</a></li>
+</ul>
+</div>
+<div class="space-y-3">
+<div class="font-['Inter'] text-[10px] uppercase tracking-widest text-white/50 mb-4">Company</div>
+<a class="block font-['Inter'] text-[10px] uppercase tracking-widest text-slate-400 hover:text-white transition-colors" href="#">Privacy</a>
+<a class="block font-['Inter'] text-[10px] uppercase tracking-widest text-slate-400 hover:text-white transition-colors" href="#">Terms of Intelligence</a>
+<a class="block font-['Inter'] text-[10px] uppercase tracking-widest text-slate-400 hover:text-white transition-colors" href="#">Verified Partners</a>
+</div>
+<div class="space-y-3">
+<div class="font-['Inter'] text-[10px] uppercase tracking-widest text-white/50 mb-4">Terminal Access</div>
+<button class="w-full py-3 bg-white text-[#064E3B] text-[10px] font-bold uppercase tracking-[0.1em] rounded transition-all hover:bg-slate-100">System Login</button>
+<div class="text-[9px] text-slate-400 font-['Inter'] uppercase tracking-widest mt-2">Secure authentication required for all data transactions.</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-[#0b513d] max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-['Inter'] text-[10px] uppercase tracking-widest leading-none text-slate-400">
+            © 2024 BIOTIK ONE HEALTH. SOVEREIGN DATA PROTECTED.
+        </div>
+<div class="flex space-x-8">
+<span class="material-symbols-outlined text-slate-400 text-lg cursor-pointer hover:text-white transition-colors">hub</span>
+<span class="material-symbols-outlined text-slate-400 text-lg cursor-pointer hover:text-white transition-colors">database</span>
+<span class="material-symbols-outlined text-slate-400 text-lg cursor-pointer hover:text-white transition-colors">language</span>
+</div>
+</div>
+</footer>
+</body></html>
